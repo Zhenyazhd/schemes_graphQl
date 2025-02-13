@@ -1,0 +1,12 @@
+overwrite: true
+schema: ""  # Укажите GraphQL-сервер или оставьте пустым
+documents: "src/**/*.graphql"
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-resolvers"
+  src/generated/schema.graphql:
+    plugins:
+      - "schema-ast"
